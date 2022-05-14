@@ -1,6 +1,6 @@
 ## Interface: 90200
 ## Title: RaidRoll
-## Version: 9.2.0
+## Version: 9.2.1
 ## Notes: Get info who got the highest roll.
 ## Author: Zetaprime82
 ## SavedVariables: RaidRollDB, PC_MinimapPos
