@@ -1,3 +1,5 @@
+RaidRoll
+
 This lightweight add-on will completely streamline loot trading in dungeons and raids. 
 Never miss a piece of loot you need again because it disappeared into your chat log!
 
