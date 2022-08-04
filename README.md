@@ -14,6 +14,7 @@ itemlink in the same sentence. It will then track any 1-100 rolls made within 60
 By default it hides all other types of rolls and duplicate rolls
 
 /rr show - Shows the roll tracking window for the leader
+
 /rr list - Shows the roll tracking window not for the leader
 
 Download Count: https://hanadigital.github.io/grev/?user=Zetaprime82&repo=RaidRoll
