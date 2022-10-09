@@ -163,19 +163,19 @@ function Print_RollItemList()
                 GameTooltip:SetHyperlink(id)
                 GameTooltip:Show()
             end)
-            RaidRoll_RollItemList[i].ui.title:SetText("|cFF040301"..RaidRoll_RollItemList[i].item);
-            RaidRoll_RollItemList[i].ui.date:SetText("|cFF040301"..RaidRoll_RollItemList[i].date);
+            RaidRoll_RollItemList[i].ui.title:SetText("|cffffffff"..RaidRoll_RollItemList[i].item);
+            RaidRoll_RollItemList[i].ui.date:SetText("|cffffffff"..RaidRoll_RollItemList[i].date);
             if(RaidRoll_RollItemList[i].win.name) then
-                RaidRoll_RollItemList[i].ui.win:SetText("|cFF040301"..Setting.Localization.Win..":"..RaidRoll_RollItemList[i].win.name);
+                RaidRoll_RollItemList[i].ui.win:SetText("|cffffffff"..Setting.Localization.Win..":"..RaidRoll_RollItemList[i].win.name);
             else
-                RaidRoll_RollItemList[i].ui.win:SetText("|cFF040301"..Setting.Localization.Win..":Нету");
+                RaidRoll_RollItemList[i].ui.win:SetText("|cffffffff"..Setting.Localization.Win..":There is not");
             end
             if RaidRoll_RollItemList[i].rollStatus and (time() - RaidRoll_RollItemList[i].time) <= 10800 then
                 RaidRoll_RollItemList[i].ui.newIcon:Show();
             else
                 RaidRoll_RollItemList[i].ui.newIcon:Hide();
             end
-            RaidRoll_RollItemList[i].ui.author:SetText("|cFF040301"..Setting.Localization.Owner..":"..RaidRoll_RollItemList[i].from);
+            RaidRoll_RollItemList[i].ui.author:SetText("|cffffffff"..Setting.Localization.Owner..":"..RaidRoll_RollItemList[i].from);
             MarginTop = MarginTop + 64;
 
         end
@@ -292,8 +292,8 @@ function Print_RollList(id)
             UIDropDownMenu_AddButton(info)
         end)
         RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel:Show();
-        RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:SetText("|cFF040301"..RaidRoll_RollItemList[id].rollList[i].name)
-        RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:SetText("|cFF040301"..RaidRoll_RollItemList[id].rollList[i].roll)
+        RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:SetText("|cffffffff"..RaidRoll_RollItemList[id].rollList[i].name)
+        RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:SetText("|cffffffff"..RaidRoll_RollItemList[id].rollList[i].roll)
         MarginTop = MarginTop + 33;
     end
 end
@@ -305,13 +305,13 @@ function RollStart(id)
             timer30s = timerRoll-GetTime()- RaidRollDB.setting.TimerCountSecAnons;
             RaidRoll_RollStatus_timer = true;
         else
-            RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cFFab885c"..Setting.Localization.timer);
+            RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cffffffff"..Setting.Localization.timer);
             RaidRoll_RespMining_RollItemInfo.reRoll:SetScript("OnMouseDown", function(self)
                 Anons_RollRaidOrGroup(Setting.Localization.timerRollEnd..' '..RaidRoll_RollItemList[RaidRoll_RollItemID].item..' '..Setting.Localization.timerRollOst..(RaidRollDB.setting.TimerCountSec)..' '..Setting.Localization.seconds)
                 timerRoll = GetTime()+RaidRollDB.setting.TimerCountSec;
                 timer30s = timerRoll-GetTime()- RaidRollDB.setting.TimerCountSecAnons;
                 RaidRoll_RollStatus_timer = true;
-                RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cFF040301"..Setting.Localization.timer);
+                RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cffffffff"..Setting.Localization.timer);
                 RaidRoll_RespMining_RollItemInfo.reRoll:SetScript("OnMouseDown",nil);
             end)
         end
@@ -323,8 +323,8 @@ function RollStart(id)
     RaidRoll_RollItemList[id].rollStatus = false;
     RaidRoll_RespMining_RollItemInfo.back:Hide();
     RaidRoll_RespMining_RollItemInfo.start:SetScript("OnMouseDown",nil);
-    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cFF040301"..Setting.Localization.Start);
-    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cFFab885c"..Setting.Localization.End);
+    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cffffffff"..Setting.Localization.Start);
+    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cffffffff"..Setting.Localization.End);
     RaidRoll_RespMining_RollItemInfo.finish:SetScript("OnMouseDown", function(self)
         RollEnd(id);
     end)
@@ -337,9 +337,9 @@ function RollEnd(id)
     RaidRoll_RollItemID = id;
     RaidRoll_RespMining_RollItemInfo.back:Show();
     RaidRoll_RespMining_RollItemInfo.finish:SetScript("OnMouseDown",nil);
-    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cFFab885c"..Setting.Localization.Start);
-    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cFF040301"..Setting.Localization.End);
-    RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cFF040301"..Setting.Localization.timer);
+    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cffffffff"..Setting.Localization.Start);
+    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cffffffff"..Setting.Localization.End);
+    RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cffffffff"..Setting.Localization.timer);
     RaidRoll_RespMining_RollItemInfo.reRoll:SetScript("OnMouseDown",nil);
     RaidRoll_RespMining_RollItemInfo.start:SetScript("OnMouseDown", function(self)
         RollStart(id);
@@ -361,8 +361,8 @@ function Roll_User_End(self,roll_id,item_id)
     RaidRoll_RollItemID = item_id;
     RaidRoll_RespMining_RollItemInfo.back:Show();
     RaidRoll_RespMining_RollItemInfo.finish:SetScript("OnMouseDown",nil);
-    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cFFab885c"..Setting.Localization.Start);
-    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cFF040301"..Setting.Localization.End);
+    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cffffffff"..Setting.Localization.Start);
+    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cffffffff"..Setting.Localization.End);
     RaidRoll_RespMining_RollItemInfo.start:SetScript("OnMouseDown", function(self)
         RollStart(item_id);
     end)
@@ -376,7 +376,7 @@ function Roll_User_End(self,roll_id,item_id)
             Anons_Personal_Message(RaidRoll_RollItemList[item_id].RollerList[RaidRoll_RollItemList[item_id].win.name]["fullName"],Setting.Localization.TextYouWin..RaidRoll_RollItemList[item_id].item..Setting.Localization.TextExchange..RaidRoll_RollItemList[item_id].from);
         end
     else
-        print("Нет порролевших")
+        print("No porrolled")
     end
     Save_BD_RollItemList()
 end
@@ -403,7 +403,7 @@ function Anons_RollRaidOrGroup(text)
     if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
         channel = "INSTANCE_CHAT"
     elseif IsInRaid(0) then
-        channel = "RAID"
+        channel = "RAID_WARNING"
     elseif IsInGroup(0) then
         channel = "PARTY"
     else

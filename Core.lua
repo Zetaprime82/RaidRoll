@@ -108,7 +108,7 @@ function GenerationMiniMapIcon()
     local PC_MinimapBtn = LibStub ("LibDataBroker-1.1"):NewDataObject("PoisonCharges", {
         type = "data source",
         text = "PoisonCharges",
-        icon = "Interface\\Icons\\INV_Chest_Cloth_17",
+        icon = "Interface\\Buttons\\ui-grouploot-dice-up",
         OnClick = function(_, button)
             if button == "LeftButton" then
                 ViewsRaidRollRemasterMain()

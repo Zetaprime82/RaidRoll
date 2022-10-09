@@ -1,6 +1,6 @@
 local _rollMessageTailRegex = RANDOM_ROLL_RESULT:gsub("%(", "%%("):gsub("%)", "%%)"):gsub("%%d", "(%%d+)"):gsub("%%%d+%$d", "(%%d+)"):gsub("%%s", ""):gsub("%%%d+%$s", "").. "$"
 local fir = CreateFrame("Frame")
-timerLastSec = 5;
+timerLastSec = 3;
 userMainName = GetUnitName("player",true);
 timer30s = 30;
 fir:RegisterEvent("CHAT_MSG_WHISPER")

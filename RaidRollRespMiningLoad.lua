@@ -1,17 +1,17 @@
 
 function RaidRoll_RespMining_SetText()
-    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cFFab885c"..Setting.Localization.Start);
-    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cFF040301"..Setting.Localization.End);
-    RaidRoll_RespMining_RollItemInfo.roll.Text:SetText("|cFFab885c"..Setting.Localization.RollPrint);
-    RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cFF040301"..Setting.Localization.timer);
-    RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:SetText("|cFFab885c"..Setting.Localization.PersonalChat);
-    RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:SetText("|cFFab885c"..Setting.Localization.RollItem);
-    RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:SetText("|cFFab885c"..Setting.Localization.Quality);
+    RaidRoll_RespMining_RollItemInfo.start.Text:SetText("|cffffffff"..Setting.Localization.Start);
+    RaidRoll_RespMining_RollItemInfo.finish.Text:SetText("|cffffffff"..Setting.Localization.End);
+    RaidRoll_RespMining_RollItemInfo.roll.Text:SetText("|cffffffff"..Setting.Localization.RollPrint);
+    RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetText("|cffffffff"..Setting.Localization.timer);
+    RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:SetText("|cffffffff"..Setting.Localization.PersonalChat);
+    RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:SetText("|cffffffff"..Setting.Localization.RollItem);
+    RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:SetText("|cffffffff"..Setting.Localization.Quality);
     RaidRoll_RespMining_MainForm.setting.itemPersonalChat.tooltip = Setting.Localization.TooltipItemPersonalChat;
     RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.tooltip = Setting.Localization.TooltipItemRare;
-    RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:SetText("|cFFab885c"..Setting.Localization.QualityPoor);
+    RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:SetText("|cff9d9d9d"..Setting.Localization.QualityPoor);
     RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.tooltip = Setting.Localization.TooltipItemRare;
-    RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:SetText(""..Setting.Localization.QualityCommon);
+    RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:SetText("|cffffffff"..Setting.Localization.QualityCommon);
     RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text:SetText("|cFF1eff00"..Setting.Localization.QualityUncommon);
     RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.tooltip = Setting.Localization.TooltipItemRare;
     RaidRoll_RespMining_MainForm.setting.itemGetItemRare.tooltip = Setting.Localization.TooltipItemRare;
@@ -20,17 +20,17 @@ function RaidRoll_RespMining_SetText()
     RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text:SetText("|cFF9345ff"..Setting.Localization.QualityEpic);
     RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.tooltip = Setting.Localization.TooltipItemRare;
     RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text:SetText("|cFFff8000"..Setting.Localization.QualityLegend);
-    RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:SetText("|cFFab885c"..Setting.Localization.MinIlvl);
-    RaidRoll_RespMining_MainForm.setting.Language.Text:SetText("|cFFab885c"..Setting.Localization.LocalzSettingTitle);
-    RaidRoll_RespMining_MainForm.setting.Save:SetText("|cFFab885c"..Setting.Localization.Save);
-    RaidRoll_RespMining_MainForm.setting.Save.On.Text:SetText("|cFFab885c"..Setting.Localization.SaveOn);
+    RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:SetText("|cffffffff"..Setting.Localization.MinIlvl);
+    RaidRoll_RespMining_MainForm.setting.Language.Text:SetText("|cffffffff"..Setting.Localization.LocalzSettingTitle);
+    RaidRoll_RespMining_MainForm.setting.Save:SetText("|cffffffff"..Setting.Localization.Save);
+    RaidRoll_RespMining_MainForm.setting.Save.On.Text:SetText("|cffffffff"..Setting.Localization.SaveOn);
     RaidRoll_RespMining_MainForm.setting.Save.On.tooltip = Setting.Localization.TooltipSaveItem;
     RaidRoll_RespMining_MainForm.setting.Save.Roll.tooltip = Setting.Localization.TooltipSaveRollItem;
-    RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:SetText("|cFFab885c"..Setting.Localization.SaveRoll);
-    RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:SetText("|cFFab885c"..Setting.Localization.CountSave);
-    RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:SetText("|cFFab885c"..Setting.Localization.CountViews);
-    RaidRoll_RespMining_MainForm.setting.Save.ButtonClearBD:SetText("|cFFab885c"..Setting.Localization.ClearBD);
-    RaidRoll_RespMining_MainForm.setting.Save.ButtonOpenAllSetting:SetText("|cFFab885c"..Setting.Localization.openAllSetting);
+    RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:SetText("|cffffffff"..Setting.Localization.SaveRoll);
+    RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:SetText("|cffffffff"..Setting.Localization.CountSave);
+    RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:SetText("|cffffffff"..Setting.Localization.CountViews);
+    RaidRoll_RespMining_MainForm.setting.Save.ButtonClearBD:SetText("|cffffffff"..Setting.Localization.ClearBD);
+    RaidRoll_RespMining_MainForm.setting.Save.ButtonOpenAllSetting:SetText("|cffffffff"..Setting.Localization.openAllSetting);
     UIDropDownMenu_SetText(RaidRoll_RespMining_MainForm.setting.Language, "English")
     if(RaidRollDB.localization)then
         if (RaidRollDB.localization == "en") then
