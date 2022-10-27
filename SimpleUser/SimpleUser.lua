@@ -65,13 +65,13 @@ function SimpleUser_PrintRollList()
             ToggleDropDownMenu(1, nil, RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.ToggleDropDownMenu, "cursor", 3, -3)
         end)
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.title = RaidRoll_SimpleUser_Item.RollListFrame[i].Panel:CreateFontString(nil, "OVERLAY", RaidRoll_SimpleUser_Item.RollListFrame[i].Panel)
-        RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.title:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 14)
+        RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.title:SetFont("Fonts\\arialn.ttf", 14)
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.title:SetPoint("TOPLEFT", 35, -6)
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.title:SetJustifyH("LEFT")
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.title:Show();
 
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.roll = RaidRoll_SimpleUser_Item.RollListFrame[i].Panel:CreateFontString(nil, "OVERLAY", RaidRoll_SimpleUser_Item.RollListFrame[i].Panel)
-        RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.roll:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 14)
+        RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.roll:SetFont("Fonts\\arialn.ttf", 14)
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.roll:SetPoint("TOPLEFT", 170, -6)
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.roll:SetJustifyH("LEFT")
         RaidRoll_SimpleUser_Item.RollListFrame[i].Panel.roll:Show();

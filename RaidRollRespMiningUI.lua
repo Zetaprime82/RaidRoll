@@ -13,8 +13,8 @@ RaidRoll_RespMining_MainForm.title:ClearAllPoints()
 RaidRoll_RespMining_MainForm.title:SetSize(200, 50)
 RaidRoll_RespMining_MainForm.title:SetPoint("TOP", 0, 14)
 
-RaidRoll_RespMining_MainForm.title.Text = RaidRoll_RespMining_MainForm.title:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.title)
-RaidRoll_RespMining_MainForm.title.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.title.Text = RaidRoll_RespMining_MainForm.title:CreateFontString(nil, "OVERLAY","GameTooltipText")
+RaidRoll_RespMining_MainForm.title.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.title.Text:SetPoint("CENTER", 2, 0)
 RaidRoll_RespMining_MainForm.title.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.title.Text:SetText("Raid Roll")
@@ -86,8 +86,8 @@ end)
 RaidRoll_RespMining_RollItemInfo.start:SetScript("OnLeave", function(self)
     RaidRoll_RespMining_RollItemInfo.start:SetBackdrop({bgFile = "Interface/SPELLBOOK/UI-SpellBook-Tab3-Selected", tile = false, tileSize = 1, insets = { left = 0, right = 0, top = -10, bottom = -10 }});
 end)
-RaidRoll_RespMining_RollItemInfo.start.Text = RaidRoll_RespMining_RollItemInfo.start:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_RollItemInfo.start)
-RaidRoll_RespMining_RollItemInfo.start.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_RollItemInfo.start.Text = RaidRoll_RespMining_RollItemInfo.start:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_RollItemInfo.start.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_RollItemInfo.start.Text:SetPoint("CENTER", 2, 5)
 RaidRoll_RespMining_RollItemInfo.start.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_RollItemInfo.start.Text:Show();
@@ -103,8 +103,8 @@ end)
 RaidRoll_RespMining_RollItemInfo.finish:SetScript("OnLeave", function(self)
     RaidRoll_RespMining_RollItemInfo.finish:SetBackdrop({bgFile = "Interface/SPELLBOOK/UI-SpellBook-Tab3-Selected",  tile = false,});
 end)
-RaidRoll_RespMining_RollItemInfo.finish.Text = RaidRoll_RespMining_RollItemInfo.finish:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_RollItemInfo.start)
-RaidRoll_RespMining_RollItemInfo.finish.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_RollItemInfo.finish.Text = RaidRoll_RespMining_RollItemInfo.finish:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_RollItemInfo.finish.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_RollItemInfo.finish.Text:SetPoint("CENTER", 2, 5)
 RaidRoll_RespMining_RollItemInfo.finish.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_RollItemInfo.finish.Text:Show();
@@ -123,8 +123,8 @@ end)
 RaidRoll_RespMining_RollItemInfo.roll:SetScript("OnMouseDown", function()
     RandomRoll(1, 100)
 end)
-RaidRoll_RespMining_RollItemInfo.roll.Text = RaidRoll_RespMining_RollItemInfo.roll:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_RollItemInfo.start)
-RaidRoll_RespMining_RollItemInfo.roll.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_RollItemInfo.roll.Text = RaidRoll_RespMining_RollItemInfo.roll:CreateFontString(nil, "OVERLAY","GameTooltipText")
+RaidRoll_RespMining_RollItemInfo.roll.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_RollItemInfo.roll.Text:SetPoint("CENTER", 2, 5)
 RaidRoll_RespMining_RollItemInfo.roll.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_RollItemInfo.roll.Text:Show();
@@ -135,8 +135,8 @@ RaidRoll_RespMining_RollItemInfo.reRoll:ClearAllPoints()
 RaidRoll_RespMining_RollItemInfo.reRoll:SetSize(100, 50)
 RaidRoll_RespMining_RollItemInfo.reRoll:SetPoint("TOPLEFT", 195, -110)
 RaidRoll_RespMining_RollItemInfo.reRoll:SetBackdrop({bgFile = "Interface/SPELLBOOK/UI-SpellBook-Tab3-Selected", tile = false, tileSize = 60, edgeSize = 10,});
-RaidRoll_RespMining_RollItemInfo.reRoll.Text = RaidRoll_RespMining_RollItemInfo.reRoll:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_RollItemInfo.start)
-RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_RollItemInfo.reRoll.Text = RaidRoll_RespMining_RollItemInfo.reRoll:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetPoint("CENTER", 2, 5)
 RaidRoll_RespMining_RollItemInfo.reRoll.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_RollItemInfo.reRoll.Text:Show();
@@ -173,18 +173,18 @@ RaidRoll_RespMining_MainForm.setting.itemPersonalChat:SetPoint("TOPLEFT", 5, -25
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemPM = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemPersonalChat)
-RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Text:Show();
-RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemPersonalChat)
-RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:SetPoint("TOPLEFT", 25, 15)
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.Title:Show();
-RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemPersonalChat)
-RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ = RaidRoll_RespMining_MainForm.setting.itemPersonalChat:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:SetPoint("TOPLEFT", 25, -35)
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemPersonalChat.TitleItemQ:Show();
@@ -194,8 +194,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetItemPoor:SetPoint("TOPLEFT", 5, -75)
 RaidRoll_RespMining_MainForm.setting.itemGetItemPoor:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemQualityPoor = RaidRoll_RespMining_MainForm.setting.itemGetItemPoor:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemPoor:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetItemPoor)
-RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemPoor:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetItemPoor.Text:Show();
@@ -205,8 +205,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetItemCommon:SetPoint("TOPLEFT", 5, -9
 RaidRoll_RespMining_MainForm.setting.itemGetItemCommon:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemQualityCommon = RaidRoll_RespMining_MainForm.setting.itemGetItemCommon:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemCommon:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetItemCommon)
-RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemCommon:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetItemCommon.Text:Show();
@@ -216,8 +216,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon:SetPoint("TOPLEFT", 5, 
 RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemQualityUncommon = RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon)
-RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetItemUncommon.Text:Show();
@@ -227,8 +227,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetItemRare:SetPoint("TOPLEFT", 5, -135
 RaidRoll_RespMining_MainForm.setting.itemGetItemRare:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemQualityRare = RaidRoll_RespMining_MainForm.setting.itemGetItemRare:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemRare:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetItemRare)
-RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemRare:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetItemRare.Text:Show();
@@ -238,8 +238,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetItemEpic:SetPoint("TOPLEFT", 5, -155
 RaidRoll_RespMining_MainForm.setting.itemGetItemEpic:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemQualityEpic = RaidRoll_RespMining_MainForm.setting.itemGetItemEpic:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemEpic:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetItemEpic)
-RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemEpic:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetItemEpic.Text:Show();
@@ -249,8 +249,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetItemLegend:SetPoint("TOPLEFT", 5, -1
 RaidRoll_RespMining_MainForm.setting.itemGetItemLegend:SetScript("OnClick", function()
     RaidRollDB.setting.GetItemQualityLegend = RaidRoll_RespMining_MainForm.setting.itemGetItemLegend:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemLegend:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetItemLegend)
-RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text = RaidRoll_RespMining_MainForm.setting.itemGetItemLegend:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetItemLegend.Text:Show();
@@ -262,8 +262,8 @@ RaidRoll_RespMining_MainForm.setting.itemGetILvl:SetHeight(20)
 RaidRoll_RespMining_MainForm.setting.itemGetILvl:SetAutoFocus(false)
 RaidRoll_RespMining_MainForm.setting.itemGetILvl:SetNumeric(true)
 RaidRoll_RespMining_MainForm.setting.itemGetILvl:SetMovable(false)
-RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text = RaidRoll_RespMining_MainForm.setting.itemGetILvl:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.itemGetILvl)
-RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text = RaidRoll_RespMining_MainForm.setting.itemGetILvl:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:SetPoint("TOPLEFT", -25, 15)
 RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.itemGetILvl.Text:Show();
@@ -283,9 +283,16 @@ RaidRoll_RespMining_MainForm.setting.Language:SetPoint("TOPLEFT", 0, -375);
 RaidRoll_RespMining_MainForm.setting.Language:SetWidth(40);
 RaidRoll_RespMining_MainForm.setting.Language:SetHeight(20);
 UIDropDownMenu_SetWidth(RaidRoll_RespMining_MainForm.setting.Language, 150);
-
-RaidRoll_RespMining_MainForm.setting.Language.Text = RaidRoll_RespMining_MainForm.setting.Language:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.Language)
-RaidRoll_RespMining_MainForm.setting.Language.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 11)
+UIDropDownMenu_Initialize(RaidRoll_RespMining_MainForm.setting.Language, function(self, level, menuList)
+    local info = UIDropDownMenu_CreateInfo()
+    info.func = Update_Language;
+    info.text, info.arg1, info.checked = "Russian", "ru",false;
+    UIDropDownMenu_AddButton(info)
+    info.text, info.arg1, info.checked = "English", "en",false;
+    UIDropDownMenu_AddButton(info)
+end)
+RaidRoll_RespMining_MainForm.setting.Language.Text = RaidRoll_RespMining_MainForm.setting.Language:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.Language.Text:SetFont("Fonts\\arialn.ttf", 11)
 RaidRoll_RespMining_MainForm.setting.Language.Text:SetPoint("TOPLEFT", 50, -7)
 RaidRoll_RespMining_MainForm.setting.Language.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.Language.Text:Show();
@@ -312,8 +319,8 @@ RaidRoll_RespMining_MainForm.setting.icon:SetScript("OnMouseDown", function(self
     end
 
 end)
-RaidRoll_RespMining_MainForm.setting.Save = RaidRoll_RespMining_MainForm.setting:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting)
-RaidRoll_RespMining_MainForm.setting.Save:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 11)
+RaidRoll_RespMining_MainForm.setting.Save = RaidRoll_RespMining_MainForm.setting:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.Save:SetFont("Fonts\\arialn.ttf", 11)
 RaidRoll_RespMining_MainForm.setting.Save:SetPoint("TOPLEFT", 50, -217)
 RaidRoll_RespMining_MainForm.setting.Save:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.Save:Show();
@@ -323,8 +330,8 @@ RaidRoll_RespMining_MainForm.setting.Save.On:SetPoint("TOPLEFT", 5, -227);
 RaidRoll_RespMining_MainForm.setting.Save.On:SetScript("OnClick", function()
     RaidRollDB.setting.SaveOn = RaidRoll_RespMining_MainForm.setting.Save.On:GetChecked()
 end)
-RaidRoll_RespMining_MainForm.setting.Save.On.Text = RaidRoll_RespMining_MainForm.setting.Save.On:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.Save.On)
-RaidRoll_RespMining_MainForm.setting.Save.On.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.Save.On.Text = RaidRoll_RespMining_MainForm.setting.Save.On:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.Save.On.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.Save.On.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.Save.On.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.Save.On.Text:Show();
@@ -335,8 +342,8 @@ RaidRoll_RespMining_MainForm.setting.Save.Roll:SetScript("OnClick", function()
     --RaidRollDB.setting.SaveRoll = RaidRoll_RespMining_MainForm.setting.Save.Roll:GetChecked()
     RaidRollDB.setting.SaveRoll = true;
 end)
-RaidRoll_RespMining_MainForm.setting.Save.Roll.Text = RaidRoll_RespMining_MainForm.setting.Save.Roll:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.Save.Roll)
-RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.Save.Roll.Text = RaidRoll_RespMining_MainForm.setting.Save.Roll:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.Save.Roll.Text:Show();
@@ -358,8 +365,8 @@ RaidRoll_RespMining_MainForm.setting.Save.CountSave:SetScript("OnTextChanged",fu
         end
     end
 end);
-RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text = RaidRoll_RespMining_MainForm.setting.Save.CountSave:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.Save.CountSave)
-RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text = RaidRoll_RespMining_MainForm.setting.Save.CountSave:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:SetPoint("TOPLEFT", 55, -5)
 RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.Save.CountSave.Text:Show();
@@ -380,8 +387,8 @@ RaidRoll_RespMining_MainForm.setting.Save.CountViews:SetScript("OnTextChanged",f
         end
     end
 end);
-RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text = RaidRoll_RespMining_MainForm.setting.Save.CountViews:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_MainForm.setting.Save.CountViews)
-RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text = RaidRoll_RespMining_MainForm.setting.Save.CountViews:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:SetPoint("TOPLEFT", 55, -5)
 RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:SetJustifyH("LEFT")
 RaidRoll_RespMining_MainForm.setting.Save.CountViews.Text:Show();

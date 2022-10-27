@@ -90,6 +90,7 @@ function Print_RollItemList()
     end
     for i = RaidRoll_RollItemList.count, RaidRoll_RollItemList.count - CountViews+1, -1 do
         if RaidRoll_RollItemList[i].status == 0 then
+            RaidRoll_RollItemList[i].ui = {};
             if not RaidRoll_RollItemList[i].ui.panel then
                 RaidRoll_RollItemList[i].ui.panel = CreateFrame("Frame", "RaidRoll_RespMining_ItemForm", RaidRoll_RespMining_ItemListForm, BackdropTemplateMixin and "BackdropTemplate")
                 RaidRoll_RollItemList[i].ui.panel:ClearAllPoints()
@@ -118,27 +119,27 @@ function Print_RollItemList()
                 RaidRoll_RollItemList[i].ui.icon:SetScript("OnLeave", function(self)
                 GameTooltip:Hide()
                 end)
-                RaidRoll_RollItemList[i].ui.title = RaidRoll_RollItemList[i].ui.bgtitle:CreateFontString(nil, "OVERLAY", RaidRoll_RollItemList[i].ui.bgtitle)
-                RaidRoll_RollItemList[i].ui.title:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+                RaidRoll_RollItemList[i].ui.title = RaidRoll_RollItemList[i].ui.bgtitle:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+                RaidRoll_RollItemList[i].ui.title:SetFont("Fonts\\arialn.ttf", 12)
                 RaidRoll_RollItemList[i].ui.title:SetPoint("TOPLEFT", 55, -2)
                 RaidRoll_RollItemList[i].ui.title:SetJustifyH("LEFT")
                 RaidRoll_RollItemList[i].ui.title:Show();
 
 
-                RaidRoll_RollItemList[i].ui.date = RaidRoll_RollItemList[i].ui.panel:CreateFontString(nil, "OVERLAY", RaidRoll_RollItemList[i].ui.panel)
-                RaidRoll_RollItemList[i].ui.date:SetFont("Fonts\\ARIALN.ttf", 9)
+                RaidRoll_RollItemList[i].ui.date = RaidRoll_RollItemList[i].ui.panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+                RaidRoll_RollItemList[i].ui.date:SetFont("Fonts\\arialn.ttf", 9)
                 RaidRoll_RollItemList[i].ui.date:SetPoint("TOPLEFT", 190, -48)
                 RaidRoll_RollItemList[i].ui.date:SetJustifyH("LEFT")
                 RaidRoll_RollItemList[i].ui.date:Show();
 
-                RaidRoll_RollItemList[i].ui.win = RaidRoll_RollItemList[i].ui.panel:CreateFontString(nil, "OVERLAY", RaidRoll_RollItemList[i].ui.panel)
-                RaidRoll_RollItemList[i].ui.win:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+                RaidRoll_RollItemList[i].ui.win = RaidRoll_RollItemList[i].ui.panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+                RaidRoll_RollItemList[i].ui.win:SetFont("Fonts\\arialn.ttf", 12)
                 RaidRoll_RollItemList[i].ui.win:SetPoint("TOPLEFT", 55, -21)
                 RaidRoll_RollItemList[i].ui.win:SetJustifyH("LEFT")
                 RaidRoll_RollItemList[i].ui.win:Show();
 
-                RaidRoll_RollItemList[i].ui.author = RaidRoll_RollItemList[i].ui.panel:CreateFontString(nil, "OVERLAY", RaidRoll_RollItemList[i].ui.panel)
-                RaidRoll_RollItemList[i].ui.author:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+                RaidRoll_RollItemList[i].ui.author = RaidRoll_RollItemList[i].ui.panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+                RaidRoll_RollItemList[i].ui.author:SetFont("FFonts\\arialn.ttf", 12)
                 RaidRoll_RollItemList[i].ui.author:SetPoint("TOPLEFT", 55, -35)
                 RaidRoll_RollItemList[i].ui.author:SetJustifyH("LEFT")
                 RaidRoll_RollItemList[i].ui.author:Show();
@@ -168,7 +169,7 @@ function Print_RollItemList()
             if(RaidRoll_RollItemList[i].win.name) then
                 RaidRoll_RollItemList[i].ui.win:SetText("|cffffffff"..Setting.Localization.Win..":"..RaidRoll_RollItemList[i].win.name);
             else
-                RaidRoll_RollItemList[i].ui.win:SetText("|cffffffff"..Setting.Localization.Win..":There is not");
+                RaidRoll_RollItemList[i].ui.win:SetText("|cffffffff"..Setting.Localization.Win..":Нету");
             end
             if RaidRoll_RollItemList[i].rollStatus and (time() - RaidRoll_RollItemList[i].time) <= 10800 then
                 RaidRoll_RollItemList[i].ui.newIcon:Show();
@@ -273,14 +274,14 @@ function Print_RollList(id)
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel:SetScript("OnMouseDown", function(self)
                 ToggleDropDownMenu(1, nil, RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.ToggleDropDownMenu, "cursor", 3, -3)
             end)
-            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title = RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel)
-            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 14)
+            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title = RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:SetFont("Fonts\\arialn.ttf", 14)
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:SetPoint("TOPLEFT", 35, -6)
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:SetJustifyH("LEFT")
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.title:Show();
 
-            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll = RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel:CreateFontString(nil, "OVERLAY", RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel)
-            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 14)
+            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll = RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+            RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:SetFont("Fonts\\arialn.ttf", 14)
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:SetPoint("TOPLEFT", 235, -6)
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:SetJustifyH("LEFT")
             RaidRoll_RespMining_RollItemInfo[i].rollListFrame.Panel.roll:Show();
@@ -376,7 +377,7 @@ function Roll_User_End(self,roll_id,item_id)
             Anons_Personal_Message(RaidRoll_RollItemList[item_id].RollerList[RaidRoll_RollItemList[item_id].win.name]["fullName"],Setting.Localization.TextYouWin..RaidRoll_RollItemList[item_id].item..Setting.Localization.TextExchange..RaidRoll_RollItemList[item_id].from);
         end
     else
-        print("No porrolled")
+        print("Нет порролевших")
     end
     Save_BD_RollItemList()
 end
@@ -387,7 +388,7 @@ function Get_WinRollItem(id)
 end
 function Clear_RollItemListFrame()
         for i = 1, RaidRoll_RollItemList.count, 1 do
-            if RaidRoll_RollItemList[i].ui.panel then
+            if RaidRoll_RollItemList[i].ui.panel  then
                 RaidRoll_RollItemList[i].ui.panel:Hide();
             end
         end

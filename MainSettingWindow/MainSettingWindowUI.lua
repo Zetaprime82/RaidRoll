@@ -13,7 +13,7 @@ RaidRoll_MainSetting_mainWindow:SetUserPlaced(true)
 RaidRoll_MainSetting_mainWindow:SetScript("OnMouseDown", RaidRoll_MainSetting_mainWindow.StartMoving)
 RaidRoll_MainSetting_mainWindow:SetScript("OnMouseUp", RaidRoll_MainSetting_mainWindow.StopMovingOrSizing)
 RaidRoll_MainSetting_mainWindow:Hide();
---- выход
+--- exit
 RaidRoll_MainSetting_mainWindow.exit = CreateFrame("Frame", "RaidRoll_MainSetting", RaidRoll_MainSetting_mainWindow, BackdropTemplateMixin and "BackdropTemplate")
 RaidRoll_MainSetting_mainWindow.exit:ClearAllPoints()
 RaidRoll_MainSetting_mainWindow.exit:SetSize(15, 15)
@@ -21,8 +21,8 @@ RaidRoll_MainSetting_mainWindow.exit:SetPoint("TOPRIGHT", -10, -7)
 RaidRoll_MainSetting_mainWindow.exit:SetScript("OnMouseDown", function()
     RaidRoll_MainSetting_mainWindow:Hide();
 end)
-RaidRoll_MainSetting_mainWindow.exit.text = RaidRoll_MainSetting_mainWindow.exit:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.exit)
-RaidRoll_MainSetting_mainWindow.exit.text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 16)
+RaidRoll_MainSetting_mainWindow.exit.text = RaidRoll_MainSetting_mainWindow.exit:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.exit.text:SetFont("Fonts\\arialn.ttf", 16)
 RaidRoll_MainSetting_mainWindow.exit.text:SetPoint("LEFT", 2, 1)
 RaidRoll_MainSetting_mainWindow.exit.text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.exit.text:SetText('x');
@@ -51,12 +51,12 @@ end)
 RaidRoll_MainSetting_mainWindow.Navigation[1].panel:SetScript("OnLeave", function(self)
     RaidRoll_MainSetting_mainWindow.Navigation[1].panel:SetBackdropColor(0,0,0,0.8);
 end)
-RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text = RaidRoll_MainSetting_mainWindow.Navigation[1].panel:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Navigation[1].panel)
-RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text = RaidRoll_MainSetting_mainWindow.Navigation[1].panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:SetPoint("LEFT", 2, 1)
 RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:Show();
-RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:SetText('Raid Roll Raiders of Rohan');
+RaidRoll_MainSetting_mainWindow.Navigation[1].panel.text:SetText('Raid Roll Remaster');
 
 --- 2
 RaidRoll_MainSetting_mainWindow.Navigation[2] = {};
@@ -71,10 +71,38 @@ end)
 RaidRoll_MainSetting_mainWindow.Navigation[2].panel:SetScript("OnLeave", function(self)
     RaidRoll_MainSetting_mainWindow.Navigation[2].panel:SetBackdropColor(0,0,0,0.8);
 end)
-RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text = RaidRoll_MainSetting_mainWindow.Navigation[2].panel:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Navigation[1].panel)
-RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Navigation[2].panel:SetScript("OnMouseDown", function(self)
+    RaidRoll_MainSetting_mainWindow.Setting:Show();
+    RaidRoll_MainSetting_mainWindow.SettingLoot:Hide();
+end)
+RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text = RaidRoll_MainSetting_mainWindow.Navigation[2].panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text:SetPoint("LEFT", 2, 1)
 RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text:Show();
 RaidRoll_MainSetting_mainWindow.Navigation[2].panel.text:SetText('Settings');
+
+--- 3
+RaidRoll_MainSetting_mainWindow.Navigation[3] = {};
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel = CreateFrame("Frame", "RaidRoll_MainSetting", RaidRoll_MainSetting_mainWindow.Navigation, BackdropTemplateMixin and "BackdropTemplate")
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetSize(140, 20)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background"});
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetBackdropColor(0,0,0,0.8);
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetPoint("TOPLEFT", 5, -50)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetScript("OnEnter", function(self)
+    RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetBackdropColor(1,1,1,0.8);
+end)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetScript("OnLeave", function(self)
+    RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetBackdropColor(0,0,0,0.8);
+end)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel:SetScript("OnMouseDown", function(self)
+    RaidRoll_MainSetting_mainWindow.Setting:Hide();
+    RaidRoll_MainSetting_mainWindow.SettingLoot:Show();
+end)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text = RaidRoll_MainSetting_mainWindow.Navigation[3].panel:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text:SetFont("Fonts\\arialn.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text:SetPoint("LEFT", 2, 1)
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text:SetJustifyH("LEFT")
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text:Show();
+RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text:SetText('Loot Panel');
 --- !Navigation end

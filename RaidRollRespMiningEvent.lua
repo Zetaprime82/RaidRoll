@@ -3,9 +3,14 @@ local fir = CreateFrame("Frame")
 timerLastSec = 3;
 userMainName = GetUnitName("player",true);
 timer30s = 30;
+local prefix = "RaidRoll"
+local successfulRequest = C_ChatInfo.RegisterAddonMessagePrefix(prefix)
 fir:RegisterEvent("CHAT_MSG_WHISPER")
 fir:RegisterEvent("CHAT_MSG_RAID_WARNING")
 fir:RegisterEvent("CHAT_MSG_SYSTEM")
+fir:RegisterEvent("LOOT_OPENED")
+fir:RegisterEvent("CHAT_MSG_ADDON_LOGGED")
+fir:RegisterEvent("CHAT_MSG_ADDON")
 fir:SetScript("OnEvent",function(self,event,...)
     if event == "CHAT_MSG_SYSTEM" then
         if RaidRoll_RollStatus then
@@ -87,6 +92,49 @@ fir:SetScript("OnEvent",function(self,event,...)
             end
         end
     end
+    if event == "LOOT_OPENED" then
+--         print('Sending messages')
+--         if C_ChatInfo.RegisterAddonMessagePrefix(prefix) then
+--             print('prefix registered')
+--             print(prefix)
+--         end
+--         if (C_ChatInfo.SendAddonMessage(prefix, "Test string","RAID","WHISPER")) then
+--             print('Sending messages 1')
+--         end
+--
+--         if C_ChatInfo.SendAddonMessage(prefix, "Test string 2","RAID","CHANNEL") then
+--             print('Sending messages 4')
+--         end
+        if RaidRollDB.setting.AutoOpenLoot then
+            if RaidRollDB.setting.OpenLootOnlyRaidOrGroup then
+                if IsInRaid(0) then
+                    GetWindow_ItemList(GetNumLootItems());
+                end
+            else
+                GetWindow_ItemList(GetNumLootItems());
+            end
+        end
+        --print("Hello, WoW!");
+        --print(GetNumLootItems());
+        --print(GetLootSlotLink(1));
+    end
+    if event == "CHAT_MSG_ADDON" then
+--         C_ChatInfo.RegisterAddonMessagePrefix(prefix)
+--         local prefixs, text, channel, sender, target, zoneChannelID, localID, name, instanceID = ...
+--         if (prefixs == "RaidRoll") then
+--             print('The first message indicating the triggering of the event')
+--             print(prefixs)
+--             print(text)
+--             print(channel)
+--             print(sender)
+--             print(target)
+--             print(zoneChannelID)
+--             print(localID)
+--             print(name)
+--             print(instanceID)
+--         end
+    end
+
 end)
 fir:SetScript("OnUpdate",function(self, elapsed,...)
     if RaidRoll_RollStatus then

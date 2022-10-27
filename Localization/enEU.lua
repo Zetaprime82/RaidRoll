@@ -18,7 +18,7 @@ localizationEN.QualityRare = "Rare";
 localizationEN.QualityEpic = "Epic";
 localizationEN.QualityLegend = "Legendary";
 localizationEN.AdditionalSetting = "Additional Settings";
-localizationEN.MinIlvl = "Minimum ilvl";
+localizationEN.MinIlvl = "Minimal ilvl";
 localizationEN.PersonalChat = " Get items for roll via personal messages.";
 localizationEN.PersonalChatTooltip = "Allows to get items for roll via incoming messages";
 -- Message
@@ -35,6 +35,7 @@ localizationEN.NotItemList = "This item is not in cached database ";
 localizationEN.NotItemListLink = " should be linked again ";
 localizationEN.InvalidArgument = " The command is invalid, to add item for roll use /rr add <Link>";
 localizationEN.LocalzSettingTitle = " language";
+localizationEN.LocalzRu = " ru - Russian";
 localizationEN.LocalzEn = " en - English";
 localizationEN.LocalzChangeText = "After changing the language, you need to restart";
 localizationEN.LocalzChangeText2 = " the interface with the command /reload ";
@@ -54,7 +55,7 @@ localizationEN.TooltipItemPersonalChat = "Makes it possible to get items for the
 localizationEN.TooltipItemRare = "Receive items of this quality from personal messages"
 localizationEN.TooltipSaveItem = "When enabled, it saves data about items and rolls. "
 localizationEN.TooltipSaveRollItem = "Includes saving all throws in addition to item information.When turned off, it saves only data about the winner"
--- Mini map
+-- Мини мап
 localizationEN.MiniMap_1 = "Left Click - Open the Leader's Raid window"
 localizationEN.MiniMap_2 = "Right Click - Open the roll"
 -- Popup
@@ -64,13 +65,19 @@ localizationEN.PopupYes = "Yes"
 localizationEN.PopupNo = "No"
 
 -- Main Setting Window
-localizationEN.timerOn = "Enable countdown timer ?"
-localizationEN.timerAutoStart = "Automatically start timer when roll starts?"
-localizationEN.timerAutoStop = "Do you want to automatically announce the winner?"
+localizationEN.timerOn = "Enable countdown timer"
+localizationEN.timerAutoStart = "Automatically start timer when role starts"
+localizationEN.timerAutoStop = "Do you want to automatically announce the winner"
 localizationEN.timerCountSecEnd = "Seconds until roll ends"
 localizationEN.timerCountSecAnons = "Alert every .. seconds"
 localizationEN.openAllSetting = "More settings"
 localizationEN.timerRollEnd = "For rolling"
 localizationEN.timerRollOst = "remain "
 localizationEN.timer = "Timer "
+-- End Main Setting Window
+-- Main Setting Loot
+localizationEN.SettingLoot = "Setting Loot"
+localizationEN.autoLoot = "Automatically open a mining window"
+localizationEN.LootOnlyRaidOrGroup = "Open loot window only in raid"
+localizationEN.AutoAddItemRollList = "Automatically add loot to the roll list"
 -- End Main Setting Window

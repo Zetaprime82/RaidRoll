@@ -3,16 +3,16 @@ RaidRoll_MainSetting_mainWindow.Setting:ClearAllPoints()
 RaidRoll_MainSetting_mainWindow.Setting:SetSize(600, 400)
 RaidRoll_MainSetting_mainWindow.Setting:SetPoint("TOPRIGHT", RaidRoll_MainSetting_mainWindow, "TOPRIGHT")
 RaidRoll_MainSetting_mainWindow.Setting:SetPoint("TOPRIGHT", 0, -25);
-RaidRoll_MainSetting_mainWindow.Setting.title = RaidRoll_MainSetting_mainWindow.Setting:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Setting)
-RaidRoll_MainSetting_mainWindow.Setting.title:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 15)
+RaidRoll_MainSetting_mainWindow.Setting.title = RaidRoll_MainSetting_mainWindow.Setting:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Setting.title:SetFont("Fonts\\arialn.ttf", 15)
 RaidRoll_MainSetting_mainWindow.Setting.title:SetPoint("TOPLEFT", 10, -15)
 RaidRoll_MainSetting_mainWindow.Setting.title:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Setting.title:Show();
 
 RaidRoll_MainSetting_mainWindow.Setting.timerOn = CreateFrame("CheckButton", "addItemPersonalChat_GlobalName", RaidRoll_MainSetting_mainWindow.Setting, "ChatConfigCheckButtonTemplate");
 RaidRoll_MainSetting_mainWindow.Setting.timerOn:SetPoint("TOPLEFT", 10, -35);
-RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text = RaidRoll_MainSetting_mainWindow.Setting.timerOn:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Setting.timerOn)
-RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text = RaidRoll_MainSetting_mainWindow.Setting.timerOn:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Setting.timerOn.Text:Show();
@@ -26,8 +26,8 @@ RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:SetHeight(20)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:SetAutoFocus(false)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:SetNumeric(true)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:SetMovable(false)
-RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text = RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Setting.timerCountSec)
-RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text = RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text:SetPoint("TOPLEFT", -25, 15)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSec.Text:Show();
@@ -39,7 +39,6 @@ RaidRoll_MainSetting_mainWindow.Setting.timerCountSec:SetScript("OnTextChanged",
             RaidRollDB.setting.TimerCountSec = 60;
         end
     end
-
 end);
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons = CreateFrame( "EditBox", nil, RaidRoll_MainSetting_mainWindow.Setting , "InputBoxTemplate");
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetPoint("TOPLEFT", 335, -85);
@@ -48,8 +47,8 @@ RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetHeight(20)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetAutoFocus(false)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetNumeric(true)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetMovable(false)
-RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text = RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons)
-RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text = RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text:SetPoint("TOPLEFT", -25, 15)
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons.Text:Show();
@@ -65,8 +64,8 @@ RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetScript("OnTextChan
 end);
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart = CreateFrame("CheckButton", "addItemPersonalChat_GlobalName", RaidRoll_MainSetting_mainWindow.Setting, "ChatConfigCheckButtonTemplate");
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart:SetPoint("TOPLEFT", 10, -115);
-RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text = RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart)
-RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text = RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text:Show();
@@ -75,11 +74,12 @@ RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart:SetScript("OnClick", func
 end)
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop = CreateFrame("CheckButton", "addItemPersonalChat_GlobalName", RaidRoll_MainSetting_mainWindow.Setting, "ChatConfigCheckButtonTemplate");
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop:SetPoint("TOPLEFT", 10, -145);
-RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text = RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop:CreateFontString(nil, "OVERLAY", RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop)
-RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text:SetFont("Interface\\AddOns\\RaidRoll\\MORPHEUS.ttf", 12)
+RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text = RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text:SetFont("Fonts\\arialn.ttf", 12)
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text:SetPoint("TOPLEFT", 25, -5)
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text:SetJustifyH("LEFT")
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text:Show();
 RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop:SetScript("OnClick", function()
     RaidRollDB.setting.TimerAutoStopOn = RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop:GetChecked()
 end)
+RaidRoll_MainSetting_mainWindow.Setting:Hide();

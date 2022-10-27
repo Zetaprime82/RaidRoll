@@ -1,12 +1,13 @@
-## Interface: 90207
+## Interface: 100000
 ## Title: RaidRoll
-## Version: 2.8 (WoW 9.2.7)
+## Version: 3.0 (WoW 10.0.0)
 ## Notes: Get info who got the highest roll.
 ## Author: Zetaprime82
 ## SavedVariables: RaidRollDB, PC_MinimapPos
 ## DefaultState: enabled
 
 Localization\enEU.lua
+Localization\ruRU.lua
 Core.lua
 Load.lua
 Libs\LibDBIcon-1.0\LibDBIcon-1.0\lib.xml
@@ -16,8 +17,11 @@ RaidRollRespMiningEvent.lua
 RaidRollRespMiningLoad.lua
 SimpleUser\SimpleUserUI.lua
 SimpleUser\SimpleUser.lua
+LootWindow\LootWindowUI.lua
+LootWindow\LootWindow.lua
 
 MainSettingWindow\MainSettingWindow.lua
 MainSettingWindow\MainSettingWindowUI.lua
 MainSettingWindow\MainSettingWindowUI-setting.lua
+MainSettingWindow\MainSettingWindowUI-loot.lua
 MainSettingWindow\MainSettingWindowEvent.lua

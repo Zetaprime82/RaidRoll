@@ -1,6 +1,7 @@
 Setting = {}
-Setting.LocalizationMarker = "en"
+Setting.LocalizationMarker = "ru"
 Setting.Localization = {}
+print("Hello, WoW!");
 function Check_Correct_Item(item)
     local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent = GetItemInfo(item);
     if itemName then
@@ -46,6 +47,9 @@ function Check_Correct_Item(item)
     end
 end
 function GetLocalizationMarker(marker)
+    if(marker == "ru") then
+        Setting.Localization = localizationRu;
+    end
     if(marker == "en") then
         Setting.Localization = localizationEN;
     end
@@ -108,7 +112,7 @@ function GenerationMiniMapIcon()
     local PC_MinimapBtn = LibStub ("LibDataBroker-1.1"):NewDataObject("PoisonCharges", {
         type = "data source",
         text = "PoisonCharges",
-        icon = "Interface\\Buttons\\ui-grouploot-dice-up",
+        icon = "Interface\\buttons\\ui-grouploot-dice-up",
         OnClick = function(_, button)
             if button == "LeftButton" then
                 ViewsRaidRollRemasterMain()
@@ -118,7 +122,7 @@ function GenerationMiniMapIcon()
             end
         end,
         OnTooltipShow = function(tt)
-            tt:AddLine("RaidRoll RoR")
+            tt:AddLine("Raid Roll Remaster")
             tt:AddLine(Setting.Localization.MiniMap_1)
             tt:AddLine(Setting.Localization.MiniMap_2)
         end,

@@ -33,6 +33,9 @@ function RaidRoll_RespMining_SetText()
     RaidRoll_RespMining_MainForm.setting.Save.ButtonOpenAllSetting:SetText("|cffffffff"..Setting.Localization.openAllSetting);
     UIDropDownMenu_SetText(RaidRoll_RespMining_MainForm.setting.Language, "English")
     if(RaidRollDB.localization)then
+        if (RaidRollDB.localization == "ru") then
+            UIDropDownMenu_SetText(RaidRoll_RespMining_MainForm.setting.Language,"Russian");
+        end
         if (RaidRollDB.localization == "en") then
             UIDropDownMenu_SetText(RaidRoll_RespMining_MainForm.setting.Language,"English");
         end
@@ -46,6 +49,12 @@ function RaidRoll_RespMining_SetText()
     RaidRoll_MainSetting_mainWindow.Setting.timerAutoStart.Text:SetText(Setting.Localization.timerAutoStart);
     RaidRoll_MainSetting_mainWindow.Setting.timerAutoStop.Text:SetText(Setting.Localization.timerAutoStop);
     --- End Main Setting Window
+    --- Main Setting Loot
+    RaidRoll_MainSetting_mainWindow.SettingLoot.AutoOpenLoot.Text:SetText(Setting.Localization.autoLoot);
+    RaidRoll_MainSetting_mainWindow.Navigation[3].panel.text:SetText(Setting.Localization.SettingLoot);
+    RaidRoll_MainSetting_mainWindow.SettingLoot.OpenLootOnlyRaidOrGroup.Text:SetText(Setting.Localization.LootOnlyRaidOrGroup);
+    RaidRoll_MainSetting_mainWindow.SettingLoot.AutoAddItemRollList.Text:SetText(Setting.Localization.AutoAddItemRollList);
+    --- End Main Setting Loot
 end
 function Set_BD_Setting_Value()
     if RaidRollDB.setting.GetItemPM then
@@ -101,6 +110,13 @@ function Set_BD_Setting_Value()
         RaidRoll_MainSetting_mainWindow.Setting.timerCountSecAnons:SetText(RaidRollDB.setting.TimerCountSecAnons)
     end
     --- End Main Setting Window
+    --- Main Setting Loot
+    if RaidRollDB.setting.AutoOpenLoot then
+        RaidRoll_MainSetting_mainWindow.SettingLoot.AutoOpenLoot:SetChecked(RaidRollDB.setting.AutoOpenLoot)
+        RaidRoll_MainSetting_mainWindow.SettingLoot.OpenLootOnlyRaidOrGroup:SetChecked(RaidRollDB.setting.OpenLootOnlyRaidOrGroup)
+        RaidRoll_MainSetting_mainWindow.SettingLoot.AutoAddItemRollList:SetChecked(RaidRollDB.setting.AutoAddItemRollList)
+    end
+    --- End Main Setting Loot
 end
 function Set_Default_Setting_Value()
     if not RaidRollDB.setting.GetItemPM then
@@ -157,5 +173,17 @@ function Set_Default_Setting_Value()
         RaidRollDB.setting.TimerCountSecAnons = 20;
     end
     --- End Main Setting Window
+    ---
+    --- Main Setting Loot
+    if not RaidRollDB.setting.AutoOpenLoot then
+        RaidRollDB.setting.AutoOpenLoot = false;
+    end
+    if not RaidRollDB.setting.OpenLootOnlyRaidOrGroup then
+        RaidRollDB.setting.OpenLootOnlyRaidOrGroup = false;
+    end
+    if not RaidRollDB.setting.AutoAddItemRollList then
+        RaidRollDB.setting.AutoAddItemRollList = false;
+    end
+    --- End Main Setting Loot
     Set_BD_Setting_Value();
 end
